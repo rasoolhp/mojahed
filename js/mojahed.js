@@ -84,7 +84,10 @@ picounter = 0
 for (title in titles) {
   var cln = pattern.cloneNode(true);
   cln.removeAttribute('hidden')
-  cln.querySelector('img').setAttribute('src', 'pics/' + title + '.jpg')
+  // global: 'https://rasoolhp.github.io/mojahed/pics/'
+  // local: 'pics/'
+  // cln.querySelector('img').setAttribute('src', 'pics/' + title + '.jpg')
+  cln.querySelector('img').setAttribute('data-src', 'https://rasoolhp.github.io/mojahed/pics/' + title + '.jpg')
   cln.querySelector('span').innerHTML = titles[title]
   document.getElementById("col-" + String((picounter % 3) + 1)).appendChild(cln);
   picounter += 1
