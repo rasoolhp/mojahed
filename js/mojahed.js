@@ -80,9 +80,9 @@ for (pic in pics_db) {
   var cln = pattern.cloneNode(true);
   cln.removeAttribute('hidden')
   // global: 'https://rasoolhp.github.io/mojahed/pics/'
-  // cln.querySelector('img').setAttribute('data-src', 'https://rasoolhp.github.io/mojahed/pics/' + title + '.jpg')
+  cln.querySelector('img').setAttribute('data-src', 'https://rasoolhp.github.io/mojahed/pics/' + pics_db[pic][0] + '.jpg')
   // local: 'pics/'
-  cln.querySelector('img').setAttribute('src', 'pics/' + pics_db[pic][0] + '.jpg')
+  // cln.querySelector('img').setAttribute('src', 'pics/' + pics_db[pic][0] + '.jpg')
   // title:
   if (pics_db[pic][1] == "notset") {
     cln.querySelector('span').innerHTML = pics_db[pic][0]
